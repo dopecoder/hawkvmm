@@ -54,7 +54,6 @@ void *create_shared_memory(size_t size)
 
 //-------------------------------------------------------------------------------
 
-
 //-------------------------------- TIMER ----------------------------------------
 
 #define TIMER_VALUE_PORT 0x46
@@ -97,6 +96,7 @@ void timer_set()
 	timer->last_int_ms = stamp / 1000000;
 	timer->start_time_ns = stamp;
 	printf("Timer set with interval %d ms\n", timer->interval_ms);
+	printf("Please input something in you keyboard and press enter, \nfor it to print the entered string to the console on every timer interrupt!\n");
 }
 
 void timer_unset()
@@ -318,7 +318,6 @@ void console_print(char *ch, size_t size)
 }
 
 //-------------------------------------------------------------------------------
-
 
 //---------------------------------- VMM ----------------------------------------
 

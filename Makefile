@@ -2,7 +2,6 @@ CFLAGS = -Wall -Wextra -Werror -O2
 
 .PHONY: run
 run: vmm
-	./vmm -b guest.img
 
 vmm: vmm.o guest.img.o
 	$(CC) $^ -o $@
